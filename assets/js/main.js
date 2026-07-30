@@ -367,12 +367,7 @@
   }
 
   /* -----------------------------------------------------------
-     9. Ticker — duplicate the track so the loop is seamless
-  ----------------------------------------------------------- */
-  $$('[data-ticker]').forEach((tr) => { tr.innerHTML += tr.innerHTML; });
-
-  /* -----------------------------------------------------------
-     10. Menu
+     9. Menu
   ----------------------------------------------------------- */
   let MENU = null;
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => (
@@ -452,7 +447,7 @@
   addEventListener('resize', moveInk);
 
   /* -----------------------------------------------------------
-     11. Instagram contact sheet
+     10. Instagram contact sheet
      Real photos when data/instagram.json has them; otherwise a
      deterministic two-ink plate is generated per frame so the grid
      is never a wall of grey boxes.
@@ -536,7 +531,7 @@
   box?.addEventListener('click', (e) => { if (e.target === box) box.close(); });
 
   /* -----------------------------------------------------------
-     12. Boot
+     11. Boot
   ----------------------------------------------------------- */
   const yr = $('#year');
   if (yr) yr.textContent = new Date().getFullYear();
