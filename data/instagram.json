@@ -1,0 +1,78 @@
+{
+  "$comment": "Contact-sheet manifest for the Instagram section. Every entry with `image: null` renders a generated riso plate instead of a photo, so the grid always looks intentional. Run `npm run instagram` (scripts/fetch-instagram.mjs) from a machine that can reach instagram.com to fill in real images + captions. See README.md.",
+  "profile": "applejacksdaily",
+  "url": "https://www.instagram.com/applejacksdaily/",
+  "fetchedAt": null,
+  "items": [
+    {
+      "id": "aj-01",
+      "image": null,
+      "alt": { "ro": "Ceașcă de espresso pe tejghea", "en": "Espresso cup on the counter" },
+      "caption": { "ro": "Prima de dimineață.", "en": "The first one of the morning." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    },
+    {
+      "id": "aj-02",
+      "image": null,
+      "alt": { "ro": "Latte art într-o cană albă", "en": "Latte art in a white mug" },
+      "caption": { "ro": "Lapte turnat cu răbdare.", "en": "Milk, poured with patience." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    },
+    {
+      "id": "aj-03",
+      "image": null,
+      "alt": { "ro": "Vitrina cu prăjituri", "en": "The pastry case" },
+      "caption": { "ro": "Se termină până la prânz.", "en": "Gone by noon." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    },
+    {
+      "id": "aj-04",
+      "image": null,
+      "alt": { "ro": "Lumină de dimineață pe geam", "en": "Morning light on the window" },
+      "caption": { "ro": "Locurile bune, la geam.", "en": "The good seats are by the window." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    },
+    {
+      "id": "aj-05",
+      "image": null,
+      "alt": { "ro": "Filtru V60 în lucru", "en": "A V60 pour-over in progress" },
+      "caption": { "ro": "Filtrul zilei.", "en": "Today's filter." },
+      "permalink": "https://www.instagram.com/applejacksdaily/reel/C4kRZRko_cd/"
+    },
+    {
+      "id": "aj-06",
+      "image": null,
+      "alt": { "ro": "Boabe proaspăt prăjite", "en": "Freshly roasted beans" },
+      "caption": { "ro": "Prăjitorie rotativă.", "en": "The roaster rotates." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    },
+    {
+      "id": "aj-07",
+      "image": null,
+      "alt": { "ro": "Cafea la pachet, pe bordură", "en": "Coffee to go, on the kerb" },
+      "caption": { "ro": "De băut din mers.", "en": "Best drunk walking." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    },
+    {
+      "id": "aj-08",
+      "image": null,
+      "alt": { "ro": "Interiorul cafenelei", "en": "Inside the shop" },
+      "caption": { "ro": "Mic, luminos, plin.", "en": "Small, bright, full." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    },
+    {
+      "id": "aj-09",
+      "image": null,
+      "alt": { "ro": "Cană adusă de acasă", "en": "A cup brought from home" },
+      "caption": { "ro": "Vino cu cana ta.", "en": "Bring your own cup." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    },
+    {
+      "id": "aj-10",
+      "image": null,
+      "alt": { "ro": "Semnul de deschis pe ușă", "en": "The open sign on the door" },
+      "caption": { "ro": "07:30. Suntem aici.", "en": "07:30. We're here." },
+      "permalink": "https://www.instagram.com/applejacksdaily/"
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="paper">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apple Jacks — Ieși la o cafea?</title>
+<meta name="description" content="Apple Jacks · cafenea de zi cu zi. Espresso, filtre, bucătărie mică și un motiv bun să ieși din casă. Luni–Vineri 07:30–16:00, Sâmbătă–Duminică 09:00–16:00.">
+<meta name="theme-color" content="#F2EBDC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14100E" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Apple Jacks — Ieși la o cafea?">
+<meta property="og:description" content="Cafenea de zi cu zi. Espresso, filtre și un motiv bun să ieși din casă.">
+<meta property="og:image" content="assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+
+<!-- Fonts are self-hosted: no third-party requests, nothing to consent to. -->
+<link rel="preload" href="assets/fonts/bodoni-moda-normal-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-normal-300-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Apple Jacks",
+  "alternateName": "@applejacksdaily",
+  "servesCuisine": "Coffee",
+  "sameAs": ["https://www.instagram.com/applejacksdaily/"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "16:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "16:00" }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ============ paper grain + overprint texture ============ -->
+<div class="paper-fx" aria-hidden="true">
+  <svg class="paper-fx__noise" xmlns="http://www.w3.org/2000/svg">
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain)"/>
+  </svg>
+  <div class="paper-fx__vignette"></div>
+</div>
+
+<a class="skip" href="#main" data-i18n="skip">Sari la conținut</a>
+
+<!-- ============ masthead ============ -->
+<header class="masthead" id="top">
+  <div class="masthead__progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <div class="dateline">
+    <div class="dateline__inner">
+      <span class="dateline__item dateline__item--nr">Nr. <span id="editionNr">001</span></span>
+      <span class="dateline__item dateline__date" id="dateline-date">—</span>
+      <span class="dateline__item dateline__status" id="statusPill" data-state="loading">
+        <i class="dot" aria-hidden="true"></i><span id="statusText" data-i18n="status.loading">se verifică…</span>
+      </span>
+      <span class="dateline__item dateline__item--motto" data-i18n="dateline.motto">Prima cafea e cea mai bună</span>
+    </div>
+  </div>
+
+  <nav class="nav" aria-label="Principal">
+    <a class="brand" href="#top" aria-label="Apple Jacks — acasă">
+      <svg class="brand__mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <use href="#apple-mark"></use>
+      </svg>
+      <span class="brand__type">
+        <span class="brand__word">Apple</span><span class="brand__word brand__word--it">Jacks</span>
+      </span>
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="#story" data-i18n="nav.story">Povestea</a></li>
+      <li><a href="#menu" data-i18n="nav.menu">Meniu</a></li>
+      <li><a href="#feed" data-i18n="nav.feed">Instagram</a></li>
+      <li><a href="#visit" data-i18n="nav.visit">Program</a></li>
+    </ul>
+
+    <div class="nav__tools">
+      <button class="lang" id="langToggle" type="button" aria-label="Schimbă limba / Change language">
+        <span class="lang__opt is-on" data-lang="ro">RO</span><span class="lang__sep">/</span><span class="lang__opt" data-lang="en">EN</span>
+      </button>
+      <button class="theme" id="themeToggle" type="button" aria-label="Comută tema" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-moon"></use></svg>
+      </button>
+      <a class="btn btn--sm nav__ig" href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener">
+        <span data-i18n="nav.follow">Urmărește</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-ig"></use></svg>
+      </a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Meniu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ mobile drawer ============ -->
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__inner">
+    <ul class="drawer__links">
+      <li style="--i:0"><a href="#story"><em>01</em><span data-i18n="nav.story">Povestea</span></a></li>
+      <li style="--i:1"><a href="#menu"><em>02</em><span data-i18n="nav.menu">Meniu</span></a></li>
+      <li style="--i:2"><a href="#feed"><em>03</em><span data-i18n="nav.feed">Instagram</span></a></li>
+      <li style="--i:3"><a href="#visit"><em>04</em><span data-i18n="nav.visit">Program</span></a></li>
+    </ul>
+    <div class="drawer__foot" style="--i:4">
+      <p class="drawer__hours" data-i18n="drawer.hours">L–V 07:30–16:00 · S–D 09:00–16:00</p>
+      <a class="btn" href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener">@applejacksdaily</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ hero ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__bleed" aria-hidden="true">
+    <svg class="hero__apple" viewBox="0 0 100 100"><use href="#apple-mark"></use></svg>
+  </div>
+
+  <div class="hero__grid">
+    <p class="kicker kicker--hero">
+      <span data-i18n="hero.kicker">Cafenea de zi cu zi</span>
+      <i class="rule" aria-hidden="true"></i>
+      <span>@applejacksdaily</span>
+    </p>
+
+    <h1 class="hero__title" id="hero-title">
+      <span class="hero__line" data-text="Apple">Apple</span>
+      <span class="hero__line hero__line--ghost" data-text="Jacks">Jacks</span>
+    </h1>
+
+    <div class="hero__ask">
+      <span class="hero__ask-static" data-i18n="hero.ask">Ieși la</span>
+      <span class="hero__ask-rotor" id="rotor" aria-live="polite">
+        <span class="hero__ask-word is-on">o cafea?</span>
+      </span>
+    </div>
+
+    <div class="hero__aside">
+      <svg class="cup" viewBox="0 0 120 140" aria-hidden="true">
+        <g class="cup__steam">
+          <path d="M44 44 C 36 32, 52 26, 44 12" />
+          <path d="M60 42 C 52 28, 68 22, 60 6" />
+          <path d="M76 44 C 68 32, 84 26, 76 12" />
+        </g>
+        <path class="cup__body" d="M22 58 H98 L90 118 C 89 127, 82 132, 74 132 H46 C 38 132, 31 127, 30 118 Z"/>
+        <path class="cup__handle" d="M97 70 C 114 70, 116 96, 96 100"/>
+        <ellipse class="cup__crema" cx="60" cy="58" rx="38" ry="7"/>
+        <path class="cup__saucer" d="M10 133 H110"/>
+      </svg>
+      <p class="hero__blurb" data-i18n="hero.blurb">Espresso scurt, filtre lungi și o bucătărie mică. Deschidem devreme, închidem la patru — pentru că ziua bună se vede de dimineață.</p>
+      <div class="hero__cta">
+        <a class="btn btn--fill" href="#menu" data-i18n="hero.ctaMenu">Vezi meniul</a>
+        <a class="btn" href="#visit" data-i18n="hero.ctaVisit">Cum ajungi</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span data-i18n="hero.scroll">derulează</span>
+    <i></i>
+  </div>
+</section>
+
+<!-- ============ ticker ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    <div class="ticker__track" data-ticker>
+      <span>Espresso</span><i>&#10022;</i><span>Flat White</span><i>&#10022;</i><span>V60</span><i>&#10022;</i><span>Cold Brew</span><i>&#10022;</i><span>Cinnamon Bun</span><i>&#10022;</i><span>Matcha</span><i>&#10022;</i><span>Banana Bread</span><i>&#10022;</i>
+    </div>
+  </div>
+  <div class="ticker__row ticker__row--alt">
+    <div class="ticker__track ticker__track--rev" data-ticker>
+      <span>Ieși la o cafea?</span><i>&#9679;</i><span>Open 07:30</span><i>&#9679;</i><span>Roasted local</span><i>&#9679;</i><span>Bring your cup</span><i>&#9679;</i><span>Dogs welcome</span><i>&#9679;</i>
+    </div>
+  </div>
+</div>
+
+<!-- ============ story ============ -->
+<section class="story" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <p class="kicker" data-reveal><span data-i18n="story.kicker">Ediția de față</span><i class="rule"></i><span>01</span></p>
+
+    <div class="story__head">
+      <h2 class="h-display" id="story-title" data-reveal>
+        <span data-i18n="story.title1">O cafenea făcută</span>
+        <em data-i18n="story.title2">pentru zilele obișnuite.</em>
+      </h2>
+    </div>
+
+    <div class="story__body">
+      <div class="story__col story__col--main">
+        <p class="lede" data-reveal data-i18n="story.p1">Nu avem pretenția că schimbăm lumea. Avem pretenția că, la 7:30 dimineața, cafeaua ta e caldă, corect extrasă și făcută de cineva care își aduce aminte cum îți place.</p>
+        <p data-reveal data-i18n="story.p2">Apple Jacks a pornit dintr-un obicei: cafeaua de dimineață luată în drum, băută pe o bordură, în picioare, cu ochii pe stradă. Am construit un loc în jurul obiceiului ăstuia — mic, luminos, cu prea multe scaune la geam și cu muzica dată exact cât trebuie ca să poți vorbi peste ea.</p>
+        <p data-reveal data-i18n="story.p3">Boabele vin de la prăjitorii mici din țară și se schimbă des. Laptele e local. Prăjiturile se termină până la prânz, ceea ce e, cumva, cel mai sincer review pe care îl putem primi.</p>
+      </div>
+
+      <aside class="story__col story__col--side">
+        <figure class="pullquote" data-reveal>
+          <blockquote data-i18n="story.quote">„Ieși la o cafea?” nu e o întrebare despre cafea.</blockquote>
+          <figcaption data-i18n="story.quoteBy">— ce spunem tuturor, tot timpul</figcaption>
+        </figure>
+
+        <dl class="facts" data-reveal>
+          <div><dt data-i18n="facts.1t">Prăjitorie</dt><dd data-i18n="facts.1d">rotativă, locală</dd></div>
+          <div><dt data-i18n="facts.2t">Deschis</dt><dd>07:30</dd></div>
+          <div><dt data-i18n="facts.3t">Locuri la geam</dt><dd data-i18n="facts.3d">niciodată destule</dd></div>
+          <div><dt data-i18n="facts.4t">Cana ta</dt><dd data-i18n="facts.4d">−3 lei</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ menu ============ -->
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <p class="kicker" data-reveal><span data-i18n="menu.kicker">Lista de prețuri</span><i class="rule"></i><span>02</span></p>
+
+    <div class="menu__head">
+      <h2 class="h-display" id="menu-title" data-reveal>
+        <span data-i18n="menu.title1">Tot ce</span> <em data-i18n="menu.title2">turnăm</em>
+      </h2>
+      <p class="menu__note" data-reveal data-i18n="menu.note">Prețurile sunt în lei. Laptele vegetal e din partea casei.</p>
+    </div>
+
+    <div class="menu__tabs" role="tablist" aria-label="Categorii meniu" data-reveal>
+      <button role="tab" id="tab-espresso"  aria-controls="panel-espresso"  aria-selected="true"  data-i18n="menu.tab1">Espresso Bar</button>
+      <button role="tab" id="tab-filter"    aria-controls="panel-filter"    aria-selected="false" data-i18n="menu.tab2">Filtre</button>
+      <button role="tab" id="tab-other"     aria-controls="panel-other"     aria-selected="false" data-i18n="menu.tab3">Fără cafea</button>
+      <button role="tab" id="tab-kitchen"   aria-controls="panel-kitchen"   aria-selected="false" data-i18n="menu.tab4">Bucătărie</button>
+      <i class="menu__tabs-ink" aria-hidden="true"></i>
+    </div>
+
+    <div class="menu__panels" id="menuPanels">
+      <!-- panels are rendered from data/menu.json; this is the no-JS fallback -->
+      <noscript>
+        <p class="menu__fallback">Meniul complet este disponibil în cafenea și pe <a href="https://www.instagram.com/applejacksdaily/">Instagram</a>.</p>
+      </noscript>
+    </div>
+  </div>
+</section>
+
+<!-- ============ instagram / contact sheet ============ -->
+<section class="feed" id="feed" aria-labelledby="feed-title">
+  <div class="wrap">
+    <p class="kicker" data-reveal><span data-i18n="feed.kicker">Masa de montaj</span><i class="rule"></i><span>03</span></p>
+
+    <div class="feed__head">
+      <h2 class="h-display" id="feed-title" data-reveal>
+        <span data-i18n="feed.title1">Zilele noastre,</span> <em data-i18n="feed.title2">pe rolă</em>
+      </h2>
+      <a class="btn btn--fill feed__follow" href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener" data-reveal>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-ig"></use></svg>
+        @applejacksdaily
+      </a>
+    </div>
+
+    <div class="sheet" id="sheet">
+      <!-- frames rendered from data/instagram.json -->
+    </div>
+
+    <p class="feed__legend" data-reveal>
+      <span data-i18n="feed.legend">Contact sheet · developed daily</span>
+      <a href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener" data-i18n="feed.legendLink">vezi tot pe Instagram →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ visit / hours ============ -->
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <p class="kicker" data-reveal><span data-i18n="visit.kicker">Ora și locul</span><i class="rule"></i><span>04</span></p>
+
+    <div class="visit__grid">
+      <div class="visit__hours">
+        <h2 class="h-display" id="visit-title" data-reveal>
+          <span data-i18n="visit.title1">Deschidem</span> <em data-i18n="visit.title2">devreme</em>
+        </h2>
+
+        <table class="hours" id="hoursTable" data-reveal>
+          <caption class="sr-only" data-i18n="visit.caption">Program săptămânal</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row" data-i18n="day.mon">Luni</th><td>07:30 — 16:00</td></tr>
+            <tr data-day="2"><th scope="row" data-i18n="day.tue">Marți</th><td>07:30 — 16:00</td></tr>
+            <tr data-day="3"><th scope="row" data-i18n="day.wed">Miercuri</th><td>07:30 — 16:00</td></tr>
+            <tr data-day="4"><th scope="row" data-i18n="day.thu">Joi</th><td>07:30 — 16:00</td></tr>
+            <tr data-day="5"><th scope="row" data-i18n="day.fri">Vineri</th><td>07:30 — 16:00</td></tr>
+            <tr data-day="6"><th scope="row" data-i18n="day.sat">Sâmbătă</th><td>09:00 — 16:00</td></tr>
+            <tr data-day="0"><th scope="row" data-i18n="day.sun">Duminică</th><td>09:00 — 16:00</td></tr>
+          </tbody>
+        </table>
+
+        <p class="visit__live" id="visitLive" data-reveal></p>
+      </div>
+
+      <div class="visit__where" data-reveal>
+        <!-- TODO(owner): înlocuiește cu adresa reală / replace with the real address -->
+        <div class="card card--address">
+          <h3 class="card__title" data-i18n="visit.addressTitle">Unde ne găsești</h3>
+          <p class="card__big">Apple Jacks</p>
+          <p class="card__meta" data-i18n="visit.addressLine">Strada &lt;de completat&gt;, București</p>
+          <p class="card__meta card__meta--todo" data-i18n="visit.addressTodo">Adresa exactă se confirmă — scrie-ne pe Instagram și îți spunem în 30 de secunde.</p>
+          <a class="btn" href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener" data-i18n="visit.dm">Scrie-ne un mesaj</a>
+        </div>
+
+        <div class="card card--map" aria-hidden="true">
+          <svg class="map" viewBox="0 0 320 220">
+            <use href="#map-art"></use>
+            <!-- kept outside the symbol so the language toggle can reach it -->
+            <text class="map__label" x="200" y="128" data-i18n="visit.mapPin">aici</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="foot">
+  <div class="foot__shout" aria-hidden="true">
+    <span data-i18n="foot.shout">Ieși la o cafea?</span>
+  </div>
+
+  <div class="wrap foot__grid">
+    <div class="foot__col">
+      <a class="brand brand--foot" href="#top">
+        <svg class="brand__mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#apple-mark"></use></svg>
+        <span class="brand__type"><span class="brand__word">Apple</span><span class="brand__word brand__word--it">Jacks</span></span>
+      </a>
+      <p class="foot__hours" data-i18n="drawer.hours">L–V 07:30–16:00 · S–D 09:00–16:00</p>
+    </div>
+
+    <div class="foot__col">
+      <h4 data-i18n="foot.nav">Secțiuni</h4>
+      <ul>
+        <li><a href="#story" data-i18n="nav.story">Povestea</a></li>
+        <li><a href="#menu" data-i18n="nav.menu">Meniu</a></li>
+        <li><a href="#feed" data-i18n="nav.feed">Instagram</a></li>
+        <li><a href="#visit" data-i18n="nav.visit">Program</a></li>
+      </ul>
+    </div>
+
+    <div class="foot__col">
+      <h4 data-i18n="foot.find">Ne găsești</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener">@applejacksdaily</a></li>
+      </ul>
+    </div>
+
+    <div class="foot__col foot__col--colophon">
+      <h4 data-i18n="foot.colophonT">Colofon</h4>
+      <p data-i18n="foot.colophon">Cules în Bodoni Moda &amp; Space Grotesk. Tipărit digital, în două culori, pe hârtie imaginară.</p>
+    </div>
+  </div>
+
+  <div class="wrap foot__base">
+    <p>&copy; <span id="year">2026</span> Apple Jacks</p>
+    <a href="#top" class="foot__top" data-i18n="foot.top">Înapoi sus ↑</a>
+  </div>
+</footer>
+
+<!-- ============ lightbox ============ -->
+<dialog class="lightbox" id="lightbox" aria-label="Fotografie">
+  <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Închide">&times;</button>
+  <figure class="lightbox__fig">
+    <div class="lightbox__media" id="lightboxMedia"></div>
+    <figcaption id="lightboxCap"></figcaption>
+  </figure>
+</dialog>
+
+<!-- ============ svg sprite ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Colours come in as custom properties: external selectors cannot reach
+         inside a <use> shadow tree, but inherited properties can. Set
+         --am-body / --am-leaf / --am-stem / --am-bean on any ancestor. -->
+    <symbol id="apple-mark" viewBox="0 0 100 100">
+      <path d="M50 30 C 43.5 19.5, 28 17.5, 19.5 26 C 9 36.5, 9.5 57.5, 18 74.5 C 24.5 87.5, 34.5 94, 43 90 C 47 88, 53 88, 57 90 C 65.5 94, 75.5 87.5, 82 74.5 C 90.5 57.5, 91 36.5, 80.5 26 C 72 17.5, 56.5 19.5, 50 30 Z"
+            fill="var(--am-body, currentColor)"/>
+      <path d="M50 29 C 50.5 19, 53.5 11, 62 6.5"
+            fill="none" stroke="var(--am-stem, currentColor)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M53 16 C 61 4.5, 78 4, 84 8.5 C 79 20.5, 62.5 23.5, 53 16 Z"
+            fill="var(--am-leaf, currentColor)"/>
+      <path d="M50 34 C 42 49, 58 60, 50 84"
+            fill="none" stroke="var(--am-bean, transparent)" stroke-width="5" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-ig" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M7 2.9h10A4.1 4.1 0 0 1 21.1 7v10a4.1 4.1 0 0 1-4.1 4.1H7A4.1 4.1 0 0 1 2.9 17V7A4.1 4.1 0 0 1 7 2.9Z"/>
+      <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path class="ic-moon" fill="currentColor" d="M20 14.4A8.6 8.6 0 0 1 9.6 4a8.6 8.6 0 1 0 10.4 10.4Z"/>
+      <g class="ic-sun" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4.2"/>
+        <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/>
+      </g>
+    </symbol>
+
+    <!-- hand-drawn neighbourhood plan -->
+    <symbol id="map-art" viewBox="0 0 320 220">
+      <g class="map__blocks">
+        <rect x="14" y="16" width="86" height="58" rx="3"/>
+        <rect x="122" y="16" width="64" height="58" rx="3"/>
+        <rect x="208" y="16" width="98" height="34" rx="3"/>
+        <rect x="14" y="98" width="86" height="46" rx="3"/>
+        <rect x="122" y="98" width="64" height="106" rx="3"/>
+        <rect x="208" y="74" width="98" height="70" rx="3"/>
+        <rect x="14" y="168" width="86" height="36" rx="3"/>
+        <rect x="208" y="168" width="98" height="36" rx="3"/>
+      </g>
+      <g class="map__roads">
+        <path d="M108 0 V220"/><path d="M196 0 V220"/>
+        <path d="M0 86 H320"/><path d="M0 156 H320"/>
+      </g>
+      <g class="map__pin" transform="translate(196 86)">
+        <path class="map__pin-ring" d="M0 -34 a34 34 0 1 1 -0.1 0 Z" fill="none" stroke-dasharray="5 7"/>
+        <path class="map__pin-body" d="M0 22 C -13 6, -19 -2, -19 -10 A 19 19 0 0 1 19 -10 C 19 -2, 13 6, 0 22 Z"/>
+        <circle class="map__pin-dot" cx="0" cy="-10" r="6.4"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
