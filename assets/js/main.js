@@ -457,7 +457,30 @@
   addEventListener('resize', moveInk);
 
   /* -----------------------------------------------------------
-     10. Instagram contact sheet
+     10. Storefront photos
+     The markup points at a .jpg. If that is not the extension the
+     owner happened to save, try the other usual ones before giving
+     up and leaving the generated plate in place.
+  ----------------------------------------------------------- */
+  $$('.place__shot[data-photo]').forEach((shot) => {
+    const img = shot.querySelector('img');
+    if (!img) return;
+    const exts = ['jpeg', 'png', 'webp'];
+    let next = 0;
+
+    const found = () => { delete shot.dataset.missing; };
+    const missing = () => {
+      if (next < exts.length) { img.src = `${shot.dataset.photo}.${exts[next++]}`; return; }
+      shot.dataset.missing = 'true';
+    };
+
+    img.addEventListener('load', found);
+    img.addEventListener('error', missing);
+    if (img.complete) (img.naturalWidth ? found : missing)();
+  });
+
+  /* -----------------------------------------------------------
+     11. Instagram contact sheet
      Real photos when data/instagram.json has them; otherwise a
      deterministic two-ink plate is generated per frame so the grid
      is never a wall of grey boxes.
@@ -541,7 +564,7 @@
   box?.addEventListener('click', (e) => { if (e.target === box) box.close(); });
 
   /* -----------------------------------------------------------
-     11. Boot
+     12. Boot
   ----------------------------------------------------------- */
   const yr = $('#year');
   if (yr) yr.textContent = new Date().getFullYear();

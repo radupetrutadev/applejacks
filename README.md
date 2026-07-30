@@ -97,18 +97,23 @@ manifest entry at its file. See `assets/instagram/README.md`.
 ## The two storefront photos
 
 The location cards expect two files, and **they are the one thing still
-missing** — the photos were shared in chat, which I could not write to disk from
-the build environment. Drop them in and nothing else needs changing:
+missing** — the photos were shared in chat, which is not something the build
+environment can write to disk. Drop them in and nothing else needs changing:
 
 | file | which shop |
 |---|---|
-| `assets/locations/mihai-viteazul.jpg` | Apple Jacks daily — the street front with the crate wall and the chalkboard |
-| `assets/locations/traian-lalescu.jpg` | Apple Jacks Coffeeholic — the house with the green awning and the terrace |
+| `assets/locations/mihai-viteazul.jpg` | Apple Jacks daily — portrait, crate wall and the "DACĂ…" chalkboard |
+| `assets/locations/traian-lalescu.jpg` | Apple Jacks Coffeeholic — landscape, green awning and the terrace deck |
+
+`.jpeg`, `.png` and `.webp` are tried as well, so only the name has to match.
+Easiest route without a clone: open
+`assets/locations/` on the branch in GitHub → **Add file › Upload files** →
+drag both in (renamed) → commit.
 
 Until a file is there, the card shows a generated two-ink plate instead of a
-broken image. Once present, the photo is desaturated, washed in red ink and
-grained so it sits inside the risograph look, and returns to full colour on
-hover.
+broken image, so the site is safe to deploy meanwhile. Once present, the photo
+is desaturated, washed in red ink and grained so it sits inside the risograph
+look, and returns to full colour on hover.
 
 ## Content still to confirm
 

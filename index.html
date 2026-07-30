@@ -332,13 +332,14 @@
     <div class="places">
 
       <article class="place" data-reveal>
-        <a class="place__shot" data-missing="true"
+        <a class="place__shot" data-photo="assets/locations/mihai-viteazul"
            href="https://www.google.com/maps/search/?api=1&amp;query=Apple+Jacks+daily%2C+Strada+Mihai+Viteazul+15%2C+Craiova"
            target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-          <!-- Drop the storefront photo at this exact path and it takes over.
-               Until then the card shows the generated plate below. -->
+          <!-- Drop the storefront photo in as assets/locations/mihai-viteazul.jpg
+               and it takes over. .jpeg / .png / .webp are tried too. Until one
+               of them exists the card shows the generated plate below. -->
           <img src="assets/locations/mihai-viteazul.jpg" alt="" loading="lazy" decoding="async"
-               onload="this.closest('.place__shot').dataset.missing='false'">
+               onerror="this.closest('.place__shot').dataset.missing='true'">
           <span class="place__plate" aria-hidden="true">
             <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
               <rect width="100" height="100" fill="var(--paper-3)"/>
@@ -367,11 +368,11 @@
       </article>
 
       <article class="place" data-reveal>
-        <a class="place__shot" data-missing="true"
+        <a class="place__shot" data-photo="assets/locations/traian-lalescu"
            href="https://www.google.com/maps/search/?api=1&amp;query=Apple+Jacks+Coffeeholic%2C+Strada+Traian+Lalescu+19%2C+Craiova"
            target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
           <img src="assets/locations/traian-lalescu.jpg" alt="" loading="lazy" decoding="async"
-               onload="this.closest('.place__shot').dataset.missing='false'">
+               onerror="this.closest('.place__shot').dataset.missing='true'">
           <span class="place__plate" aria-hidden="true">
             <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
               <rect width="100" height="100" fill="var(--paper-3)"/>
