@@ -1,0 +1,13 @@
+{
+  "name": "applejacks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for Apple Jacks coffee shop (@applejacksdaily) — a two-ink risograph broadsheet, no build step.",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "instagram": "node scripts/fetch-instagram.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED"
+}

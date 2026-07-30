@@ -1,0 +1,53 @@
+{
+  "$comment": "PLACEHOLDER MENU — items and prices are illustrative and must be confirmed by the shop before the site goes live. Prices in RON. Edit freely; the page renders straight from this file.",
+  "currency": "lei",
+  "categories": [
+    {
+      "id": "espresso",
+      "name": { "ro": "Espresso Bar", "en": "Espresso Bar" },
+      "items": [
+        { "name": { "ro": "Espresso", "en": "Espresso" }, "desc": { "ro": "Un shot, boabele lunii, băut la bar.", "en": "One shot, this month's beans, drunk at the bar." }, "price": "9" },
+        { "name": { "ro": "Macchiato", "en": "Macchiato" }, "desc": { "ro": "Espresso cu o pată de lapte.", "en": "Espresso with a stain of milk." }, "price": "11" },
+        { "name": { "ro": "Cortado", "en": "Cortado" }, "desc": { "ro": "Jumate-jumate, în pahar mic.", "en": "Half and half, in a small glass." }, "price": "13" },
+        { "name": { "ro": "Flat White", "en": "Flat White" }, "desc": { "ro": "Dublu ristretto, lapte texturat mărunt.", "en": "Double ristretto, finely textured milk." }, "price": "16", "tag": { "ro": "cel mai cerut", "en": "most ordered" } },
+        { "name": { "ro": "Cappuccino", "en": "Cappuccino" }, "desc": { "ro": "Clasic, cu spumă cât trebuie.", "en": "Classic, with just enough foam." }, "price": "15" },
+        { "name": { "ro": "Latte", "en": "Latte" }, "desc": { "ro": "Lung, blând, pentru dimineți lente.", "en": "Long, gentle, for slow mornings." }, "price": "16" },
+        { "name": { "ro": "Espresso Tonic", "en": "Espresso Tonic" }, "desc": { "ro": "Tonic, gheață, un shot deasupra.", "en": "Tonic, ice, a shot on top." }, "price": "18", "tag": { "ro": "vara", "en": "summer" } }
+      ]
+    },
+    {
+      "id": "filter",
+      "name": { "ro": "Filtre", "en": "Filter" },
+      "items": [
+        { "name": { "ro": "Batch Brew", "en": "Batch Brew" }, "desc": { "ro": "Se schimbă zilnic. Refill la jumătate de preț.", "en": "Changes daily. Refills at half price." }, "price": "12" },
+        { "name": { "ro": "V60", "en": "V60" }, "desc": { "ro": "Turnat la comandă, patru minute, merită.", "en": "Brewed to order, four minutes, worth it." }, "price": "19" },
+        { "name": { "ro": "AeroPress", "en": "AeroPress" }, "desc": { "ro": "Corp mai plin, aciditate mai blândă.", "en": "Fuller body, softer acidity." }, "price": "18" },
+        { "name": { "ro": "Cold Brew", "en": "Cold Brew" }, "desc": { "ro": "Extras 16 ore, servit peste gheață.", "en": "Steeped 16 hours, served over ice." }, "price": "17" },
+        { "name": { "ro": "Cascara", "en": "Cascara" }, "desc": { "ro": "Coajă de cafea, gust de fruct uscat.", "en": "Coffee cherry husk, tastes of dried fruit." }, "price": "14" }
+      ]
+    },
+    {
+      "id": "other",
+      "name": { "ro": "Fără cafea", "en": "No Coffee" },
+      "items": [
+        { "name": { "ro": "Matcha Latte", "en": "Matcha Latte" }, "desc": { "ro": "Ceremonial, bătut cu telul.", "en": "Ceremonial grade, whisked." }, "price": "18" },
+        { "name": { "ro": "Ciocolată caldă", "en": "Hot Chocolate" }, "desc": { "ro": "70%, densă, fără compromisuri.", "en": "70%, thick, no compromises." }, "price": "17" },
+        { "name": { "ro": "Chai Latte", "en": "Chai Latte" }, "desc": { "ro": "Condimente fierte în casă.", "en": "Spices simmered in house." }, "price": "17" },
+        { "name": { "ro": "Limonadă de casă", "en": "House Lemonade" }, "desc": { "ro": "Lămâie, mentă, gheață multă.", "en": "Lemon, mint, plenty of ice." }, "price": "14" },
+        { "name": { "ro": "Ceai la plic dublu", "en": "Double-bag Tea" }, "desc": { "ro": "Pentru cine chiar nu vrea cafea.", "en": "For those who truly don't want coffee." }, "price": "10" }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "name": { "ro": "Bucătărie", "en": "Kitchen" },
+      "items": [
+        { "name": { "ro": "Cinnamon Bun", "en": "Cinnamon Bun" }, "desc": { "ro": "Scos din cuptor la 08:00. Nu rezistă mult.", "en": "Out of the oven at 08:00. Never lasts." }, "price": "16", "tag": { "ro": "se termină", "en": "sells out" } },
+        { "name": { "ro": "Banana Bread", "en": "Banana Bread" }, "desc": { "ro": "Cu unt sărat, dacă vrei.", "en": "With salted butter, if you like." }, "price": "14" },
+        { "name": { "ro": "Croissant cu unt", "en": "Butter Croissant" }, "desc": { "ro": "Simplu. Cum trebuie.", "en": "Plain. As it should be." }, "price": "12" },
+        { "name": { "ro": "Avocado pe pâine cu maia", "en": "Avocado on Sourdough" }, "desc": { "ro": "Ou pe deasupra, +6 lei.", "en": "Add an egg, +6 lei." }, "price": "28" },
+        { "name": { "ro": "Iaurt cu granola", "en": "Yoghurt & Granola" }, "desc": { "ro": "Granolă făcută în casă, fructe de sezon.", "en": "House granola, seasonal fruit." }, "price": "22" },
+        { "name": { "ro": "Sandviș cald al zilei", "en": "Toastie of the Day" }, "desc": { "ro": "Întreabă la bar. Se schimbă des.", "en": "Ask at the bar. Changes often." }, "price": "26" }
+      ]
+    }
+  ]
+}
