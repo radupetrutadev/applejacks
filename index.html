@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Apple Jacks — Ieși la o cafea?</title>
-<meta name="description" content="Apple Jacks · cafenea de zi cu zi. Espresso, filtre, bucătărie mică și un motiv bun să ieși din casă. Luni–Vineri 07:30–16:00, Sâmbătă–Duminică 09:00–16:00.">
+<meta name="description" content="Apple Jacks · cafenea de zi cu zi în Craiova, în două locuri: Strada Mihai Viteazul 15 și Strada Traian Lalescu 19. Espresso, filtre și o bucătărie mică. Deschidem la 07:30.">
 <meta name="theme-color" content="#F2EBDC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#14100E" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Apple Jacks — Ieși la o cafea?">
-<meta property="og:description" content="Cafenea de zi cu zi. Espresso, filtre și un motiv bun să ieși din casă.">
+<meta property="og:description" content="Cafenea de zi cu zi în Craiova. Două locuri, aceleași boabe. Deschidem la 07:30.">
 <meta property="og:image" content="assets/img/og.svg">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -26,14 +26,45 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "name": "Apple Jacks",
-  "alternateName": "@applejacksdaily",
-  "servesCuisine": "Coffee",
-  "sameAs": ["https://www.instagram.com/applejacksdaily/"],
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "16:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "16:00" }
+  "@graph": [
+    {
+      "@type": "CafeOrCoffeeShop",
+      "@id": "#daily",
+      "name": "Apple Jacks daily",
+      "branchOf": { "@type": "Organization", "name": "Apple Jacks" },
+      "servesCuisine": "Coffee",
+      "priceRange": "1-20 lei",
+      "sameAs": ["https://www.instagram.com/applejacksdaily/"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Strada Mihai Viteazul 15",
+        "addressLocality": "Craiova",
+        "addressCountry": "RO"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "16:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "16:00" }
+      ]
+    },
+    {
+      "@type": "CafeOrCoffeeShop",
+      "@id": "#coffeeholic",
+      "name": "Apple Jacks Coffeeholic",
+      "branchOf": { "@type": "Organization", "name": "Apple Jacks" },
+      "servesCuisine": "Coffee",
+      "priceRange": "1-20 lei",
+      "sameAs": ["https://www.instagram.com/applejacksdaily/"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Strada Traian Lalescu 19",
+        "addressLocality": "Craiova",
+        "addressCountry": "RO"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "16:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "16:00" }
+      ]
+    }
   ]
 }
 </script>
@@ -83,7 +114,7 @@
     <ul class="nav__links">
       <li><a href="#story" data-i18n="nav.story">Povestea</a></li>
       <li><a href="#menu" data-i18n="nav.menu">Meniu</a></li>
-      <li><a href="#feed" data-i18n="nav.feed">Instagram</a></li>
+      <li><a href="#feed" data-i18n="nav.feed">Urmărește</a></li>
       <li><a href="#visit" data-i18n="nav.visit">Program</a></li>
     </ul>
 
@@ -94,10 +125,6 @@
       <button class="theme" id="themeToggle" type="button" aria-label="Comută tema" aria-pressed="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-moon"></use></svg>
       </button>
-      <a class="btn btn--sm nav__ig" href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener">
-        <span data-i18n="nav.follow">Urmărește</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-ig"></use></svg>
-      </a>
       <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Meniu">
         <span></span><span></span>
       </button>
@@ -111,7 +138,7 @@
     <ul class="drawer__links">
       <li style="--i:0"><a href="#story"><em>01</em><span data-i18n="nav.story">Povestea</span></a></li>
       <li style="--i:1"><a href="#menu"><em>02</em><span data-i18n="nav.menu">Meniu</span></a></li>
-      <li style="--i:2"><a href="#feed"><em>03</em><span data-i18n="nav.feed">Instagram</span></a></li>
+      <li style="--i:2"><a href="#feed"><em>03</em><span data-i18n="nav.feed">Urmărește</span></a></li>
       <li style="--i:3"><a href="#visit"><em>04</em><span data-i18n="nav.visit">Program</span></a></li>
     </ul>
     <div class="drawer__foot" style="--i:4">
@@ -271,12 +298,17 @@
     <p class="kicker" data-reveal><span data-i18n="visit.kicker">Ora și locul</span><i class="rule"></i><span>04</span></p>
 
     <div class="visit__grid">
-      <div class="visit__hours">
+      <div class="visit__where">
         <h2 class="h-display" id="visit-title" data-reveal>
           <span data-i18n="visit.title1">Deschidem</span> <em data-i18n="visit.title2">devreme</em>
         </h2>
+        <p class="visit__intro" data-reveal data-i18n="visit.intro">Suntem în două locuri din Craiova. Aceleași boabe, aceiași oameni — două camere cu caractere diferite: una la stradă, în centru, alta cu terasă și mult cer deasupra.</p>
+        <p class="visit__live" id="visitLive" data-reveal></p>
+      </div>
 
-        <table class="hours" id="hoursTable" data-reveal>
+      <div class="visit__hours" data-reveal>
+        <h3 class="card__title" data-i18n="visit.hoursTitle">Program</h3>
+        <table class="hours" id="hoursTable">
           <caption class="sr-only" data-i18n="visit.caption">Program săptămânal</caption>
           <tbody>
             <tr data-day="1"><th scope="row" data-i18n="day.mon">Luni</th><td>07:30 — 16:00</td></tr>
@@ -288,28 +320,85 @@
             <tr data-day="0"><th scope="row" data-i18n="day.sun">Duminică</th><td>09:00 — 16:00</td></tr>
           </tbody>
         </table>
-
-        <p class="visit__live" id="visitLive" data-reveal></p>
       </div>
+    </div>
 
-      <div class="visit__where" data-reveal>
-        <!-- TODO(owner): înlocuiește cu adresa reală / replace with the real address -->
-        <div class="card card--address">
-          <h3 class="card__title" data-i18n="visit.addressTitle">Unde ne găsești</h3>
-          <p class="card__big">Apple Jacks</p>
-          <p class="card__meta" data-i18n="visit.addressLine">Strada &lt;de completat&gt;, București</p>
-          <p class="card__meta card__meta--todo" data-i18n="visit.addressTodo">Adresa exactă se confirmă — scrie-ne pe Instagram și îți spunem în 30 de secunde.</p>
-          <a class="btn" href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener" data-i18n="visit.dm">Scrie-ne un mesaj</a>
-        </div>
+    <h3 class="places__title" id="places-title" data-reveal>
+      <span data-i18n="places.title">Două case</span>
+      <i class="rule" aria-hidden="true"></i>
+      <span class="places__count">02</span>
+    </h3>
 
-        <div class="card card--map" aria-hidden="true">
-          <svg class="map" viewBox="0 0 320 220">
-            <use href="#map-art"></use>
-            <!-- kept outside the symbol so the language toggle can reach it -->
-            <text class="map__label" x="200" y="128" data-i18n="visit.mapPin">aici</text>
-          </svg>
+    <div class="places">
+
+      <article class="place" data-reveal>
+        <a class="place__shot" data-missing="true"
+           href="https://www.google.com/maps/search/?api=1&amp;query=Apple+Jacks+daily%2C+Strada+Mihai+Viteazul+15%2C+Craiova"
+           target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <!-- Drop the storefront photo at this exact path and it takes over.
+               Until then the card shows the generated plate below. -->
+          <img src="assets/locations/mihai-viteazul.jpg" alt="" loading="lazy" decoding="async"
+               onload="this.closest('.place__shot').dataset.missing='false'">
+          <span class="place__plate" aria-hidden="true">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+              <rect width="100" height="100" fill="var(--paper-3)"/>
+              <rect x="0" y="62" width="100" height="38" fill="var(--ink)"/>
+              <rect x="8" y="18" width="30" height="44" fill="var(--red)"/>
+              <rect x="44" y="8" width="48" height="54" fill="var(--green)" opacity=".9"/>
+              <circle cx="68" cy="35" r="14" fill="var(--paper)"/>
+            </svg>
+          </span>
+          <span class="place__nr">01</span>
+        </a>
+
+        <div class="place__body">
+          <h4 class="place__name">Apple Jacks <em>daily</em></h4>
+          <p class="place__addr">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Apple+Jacks+daily%2C+Strada+Mihai+Viteazul+15%2C+Craiova"
+               target="_blank" rel="noopener">Strada Mihai Viteazul 15 — Craiova</a>
+          </p>
+          <p class="place__blurb" data-i18n="place.1.blurb">În centru, cu geam la stradă. Scaune afară, tabla cu mesaje lângă ușă și cafea la pachet dacă ești doar în trecere.</p>
+          <ul class="place__facts">
+            <li><span data-i18n="place.opens">Deschide</span> <b>07:30</b></li>
+            <li data-i18n="place.1.tag">La pachet</li>
+            <li class="place__rate"><b>4,9</b> <span data-i18n="place.reviews">200 de recenzii pe Google</span></li>
+          </ul>
         </div>
-      </div>
+      </article>
+
+      <article class="place" data-reveal>
+        <a class="place__shot" data-missing="true"
+           href="https://www.google.com/maps/search/?api=1&amp;query=Apple+Jacks+Coffeeholic%2C+Strada+Traian+Lalescu+19%2C+Craiova"
+           target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="assets/locations/traian-lalescu.jpg" alt="" loading="lazy" decoding="async"
+               onload="this.closest('.place__shot').dataset.missing='false'">
+          <span class="place__plate" aria-hidden="true">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+              <rect width="100" height="100" fill="var(--paper-3)"/>
+              <rect x="0" y="70" width="100" height="30" fill="var(--green)"/>
+              <path d="M14 70 L50 24 L86 70 Z" fill="var(--red)"/>
+              <rect x="40" y="46" width="20" height="24" fill="var(--paper)"/>
+              <circle cx="78" cy="20" r="11" fill="var(--ink)"/>
+            </svg>
+          </span>
+          <span class="place__nr">02</span>
+        </a>
+
+        <div class="place__body">
+          <h4 class="place__name">Apple Jacks <em>Coffeeholic</em></h4>
+          <p class="place__addr">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Apple+Jacks+Coffeeholic%2C+Strada+Traian+Lalescu+19%2C+Craiova"
+               target="_blank" rel="noopener">Strada Traian Lalescu 19 — Craiova</a>
+          </p>
+          <p class="place__blurb" data-i18n="place.2.blurb">Casa cu terasă. Mese afară pe platformă, umbrar verde și loc destul cât să rămâi o dimineață întreagă.</p>
+          <ul class="place__facts">
+            <li><span data-i18n="place.opens">Deschide</span> <b>07:30</b></li>
+            <li data-i18n="place.2.tag">Terasă</li>
+            <li class="place__rate"><b>5,0</b> <span data-i18n="place.reviews2">42 de recenzii pe Google</span></li>
+          </ul>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -336,7 +425,7 @@
       <ul>
         <li><a href="#story" data-i18n="nav.story">Povestea</a></li>
         <li><a href="#menu" data-i18n="nav.menu">Meniu</a></li>
-        <li><a href="#feed" data-i18n="nav.feed">Instagram</a></li>
+        <li><a href="#feed" data-i18n="nav.feed">Urmărește</a></li>
         <li><a href="#visit" data-i18n="nav.visit">Program</a></li>
       </ul>
     </div>
@@ -344,6 +433,8 @@
     <div class="foot__col">
       <h4 data-i18n="foot.find">Ne găsești</h4>
       <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Apple+Jacks+daily%2C+Strada+Mihai+Viteazul+15%2C+Craiova" target="_blank" rel="noopener">Strada Mihai Viteazul 15<br><small>Craiova</small></a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Apple+Jacks+Coffeeholic%2C+Strada+Traian+Lalescu+19%2C+Craiova" target="_blank" rel="noopener">Strada Traian Lalescu 19<br><small>Craiova</small></a></li>
         <li><a href="https://www.instagram.com/applejacksdaily/" target="_blank" rel="noopener">@applejacksdaily</a></li>
       </ul>
     </div>
@@ -400,28 +491,6 @@
       </g>
     </symbol>
 
-    <!-- hand-drawn neighbourhood plan -->
-    <symbol id="map-art" viewBox="0 0 320 220">
-      <g class="map__blocks">
-        <rect x="14" y="16" width="86" height="58" rx="3"/>
-        <rect x="122" y="16" width="64" height="58" rx="3"/>
-        <rect x="208" y="16" width="98" height="34" rx="3"/>
-        <rect x="14" y="98" width="86" height="46" rx="3"/>
-        <rect x="122" y="98" width="64" height="106" rx="3"/>
-        <rect x="208" y="74" width="98" height="70" rx="3"/>
-        <rect x="14" y="168" width="86" height="36" rx="3"/>
-        <rect x="208" y="168" width="98" height="36" rx="3"/>
-      </g>
-      <g class="map__roads">
-        <path d="M108 0 V220"/><path d="M196 0 V220"/>
-        <path d="M0 86 H320"/><path d="M0 156 H320"/>
-      </g>
-      <g class="map__pin" transform="translate(196 86)">
-        <path class="map__pin-ring" d="M0 -34 a34 34 0 1 1 -0.1 0 Z" fill="none" stroke-dasharray="5 7"/>
-        <path class="map__pin-body" d="M0 22 C -13 6, -19 -2, -19 -10 A 19 19 0 0 1 19 -10 C 19 -2, 13 6, 0 22 Z"/>
-        <circle class="map__pin-dot" cx="0" cy="-10" r="6.4"/>
-      </g>
-    </symbol>
   </defs>
 </svg>
 

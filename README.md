@@ -1,7 +1,11 @@
 # Apple Jacks
 
-Website for **Apple Jacks**, the daily coffee shop behind
-[@applejacksdaily](https://www.instagram.com/applejacksdaily/).
+Website for **Apple Jacks**, the coffee shop behind
+[@applejacksdaily](https://www.instagram.com/applejacksdaily/) — two rooms in
+Craiova:
+
+- **Apple Jacks daily** — Strada Mihai Viteazul 15
+- **Apple Jacks Coffeeholic** — Strada Traian Lalescu 19
 
 Static HTML, CSS and JavaScript. No framework, no build step, no dependencies —
 open `index.html` and it works.
@@ -33,6 +37,7 @@ leaf. Everything follows from that idea rather than from a layout template.
 | **Bilingual** | Romanian by default, English one tap away. Persisted to `localStorage`; falls back to the browser's language. |
 | **Live opening status** | Computed in `Europe/Bucharest`, not the visitor's timezone, so the lamp is right whoever is looking. Updates every minute and highlights today's row in the hours table. |
 | **Night shift** | A dark "press ink" theme that respects `prefers-color-scheme` and can be overridden by the toggle. |
+| **Two locations** | Both shops get a card with its own photo, address, character and Google rating, each linking straight out to Maps. Structured data ships both branches so search engines see two places, not one. |
 | **Mobile first** | Fluid type throughout, a full-screen drawer, horizontally scrollable menu tabs, and a hero that re-anchors the apple so it never sits under the text. |
 | **Accessible** | Semantic landmarks, a skip link, real tab semantics with arrow-key support, visible focus rings, and full `prefers-reduced-motion` support. |
 | **Fast** | Zero third-party requests. Self-hosted fonts (280 KB, latin + latin-ext only). No JS framework. Works with JavaScript disabled, just without the menu and gallery. |
@@ -89,37 +94,52 @@ manifest entry at its file. See `assets/instagram/README.md`.
 
 ---
 
+## The two storefront photos
+
+The location cards expect two files, and **they are the one thing still
+missing** — the photos were shared in chat, which I could not write to disk from
+the build environment. Drop them in and nothing else needs changing:
+
+| file | which shop |
+|---|---|
+| `assets/locations/mihai-viteazul.jpg` | Apple Jacks daily — the street front with the crate wall and the chalkboard |
+| `assets/locations/traian-lalescu.jpg` | Apple Jacks Coffeeholic — the house with the green awning and the terrace |
+
+Until a file is there, the card shows a generated two-ink plate instead of a
+broken image. Once present, the photo is desaturated, washed in red ink and
+grained so it sits inside the risograph look, and returns to full colour on
+hover.
+
 ## Content still to confirm
 
-These are marked `TODO(owner)` in the source and should be checked with the shop
-before the site goes public:
-
-- **The address.** Not published anywhere I could reach, so `index.html` shows a
-  visible "still being confirmed" note with a link to DM the shop, rather than
-  an invented street. Replace it in the `.card--address` block and in
-  `visit.addressLine` in `assets/js/main.js`.
 - **The menu.** `data/menu.json` is a plausible specialty-coffee list with RON
   prices — drinks that any shop like this pours, but **not** verified against
   what Apple Jacks actually serves. Edit that one file and the page follows.
+- **Closing times per location.** Google confirms both shops open at 07:30; the
+  16:00 close comes from the Instagram profile and is applied to both. If the
+  two differ, the hours table needs splitting.
+- **The Google ratings** (4,9 / 200 and 5,0 / 42) are a snapshot taken in July
+  2026 and are hardcoded in `index.html`. They will drift — refresh them or drop
+  the `.place__rate` line.
 - **The story copy.** Written to fit the shop's voice from its Instagram
   ("Ieși la o cafea?", coffeeholic place, opens 07:30); it is not dictated
   copy. Both languages live in the `I18N` table in `assets/js/main.js`.
 
-Confirmed from public sources: the handle, the tagline, and the opening hours
-(Mon–Fri 07:30–16:00, Sat–Sun 09:00–16:00).
+Confirmed: the handle, the tagline, both addresses, and the 07:30 opening.
 
 ---
 
 ## Layout
 
 ```
-index.html                  markup + the SVG sprite (apple mark, icons, map)
+index.html                  markup + the SVG sprite (apple mark, icons)
 assets/css/main.css         the whole design system, in numbered sections
 assets/css/fonts.css        self-hosted @font-face rules
 assets/fonts/               woff2, latin + latin-ext
 assets/js/main.js           i18n, opening hours, menu, gallery, motion
 assets/img/                 favicon + Open Graph card
-assets/instagram/           photos land here
+assets/instagram/           gallery photos land here
+assets/locations/           the two storefront photos land here
 data/menu.json              the menu, bilingual
 data/instagram.json         the contact-sheet manifest
 scripts/fetch-instagram.mjs pulls posts from Instagram
