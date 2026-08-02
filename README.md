@@ -10,6 +10,11 @@ Craiova:
 Static HTML, CSS and JavaScript. No framework, no build step, no dependencies —
 open `index.html` and it works.
 
+> **Also in this repo:** [`aromaland/`](aromaland/README.md) — a redesign of
+> [aromaland-shop.ro](https://www.aromaland-shop.ro/), the Aroma Land
+> aromatherapy shop. Separate site, separate design system, same
+> no-build-step rules. Served at `/aromaland/`.
+
 ---
 
 ## The design
