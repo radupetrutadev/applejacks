@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aroma Land — aromaterapie, uleiuri esențiale și parfumare pentru casă</title>
+<meta name="description" content="Uleiuri esențiale 100% naturale, difuzoare de aromaterapie, lumânări și bețișoare parfumate. Fabricate în România din 1997. Livrare gratuită peste 250 lei, retur în 30 de zile.">
+<meta name="theme-color" content="#FBF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14130F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://www.aromaland-shop.ro/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Aroma Land">
+<meta property="og:title" content="Aroma Land — aromaterapie și parfumare pentru casă">
+<meta property="og:description" content="Uleiuri esențiale 100% naturale, difuzoare, lumânări și bețișoare parfumate. Fabricate în România din 1997.">
+
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-normal-300-700-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-normal-300-700-latin-ext.woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script>
+  /* Theme before first paint — no flash. */
+  try {
+    var t = localStorage.getItem('al.theme');
+    if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+
+<script defer src="assets/js/catalog.js"></script>
+<script defer src="assets/js/app.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OnlineStore",
+  "name": "Aroma Land",
+  "url": "https://www.aromaland-shop.ro/",
+  "description": "Aromaterapie, uleiuri esențiale, difuzoare, lumânări și bețișoare parfumate.",
+  "foundingDate": "1997",
+  "currenciesAccepted": "RON",
+  "paymentAccepted": "Card de credit, Ramburs",
+  "address": { "@type": "PostalAddress", "addressLocality": "Craiova", "addressCountry": "RO" },
+  "parentOrganization": { "@type": "Organization", "name": "Electric Masters S.R.L." }
+}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#produse">Sari la produse</a>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════ -->
+<header class="hdr" id="hdr">
+  <div class="hdr__bar wrap">
+    <a class="logo" href="#" aria-label="Aroma Land — prima pagină">
+      <svg class="logo__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path d="M32 12c8 8 13 15 13 22a13 13 0 0 1-26 0c0-7 5-14 13-22Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M32 28v16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+      </svg>
+      <span class="logo__txt">Aroma<span>Land</span></span>
+    </a>
+
+    <form class="search" role="search" id="searchForm" autocomplete="off">
+      <svg class="search__icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+      <input class="search__input" id="q" type="search" name="q" placeholder="Caută lavandă, difuzor, lumânare…" aria-label="Caută în magazin" enterkeyhint="search">
+      <button class="search__clear" type="button" id="qClear" hidden aria-label="Șterge căutarea">
+        <svg aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+      </button>
+      <kbd class="search__kbd" aria-hidden="true">/</kbd>
+    </form>
+
+    <div class="hdr__actions">
+      <button class="iconbtn" id="searchToggle" type="button" aria-label="Caută" aria-expanded="false">
+        <svg aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+      </button>
+      <button class="iconbtn" id="themeBtn" type="button" aria-label="Schimbă tema">
+        <svg class="ico-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
+        <svg class="ico-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
+      </button>
+      <button class="cartbtn" id="cartBtn" type="button" aria-label="Deschide coșul">
+        <svg aria-hidden="true" focusable="false"><use href="#i-cart"/></svg>
+        <span class="cartbtn__n" id="cartCount" hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══ HERO ═════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Fabricat în România din 1997</p>
+        <h1 class="hero__h">Casa ta,<br>în aroma potrivită.</h1>
+        <p class="hero__p">Uleiuri esențiale 100% naturale, difuzoare de aromaterapie, lumânări și bețișoare parfumate — alese simplu, livrate repede.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="#produse">Cumpără acum</a>
+          <button class="btn btn--ghost btn--lg" type="button" data-filter="difuzoare">Vezi difuzoarele</button>
+        </div>
+        <ul class="trust" role="list">
+          <li><svg aria-hidden="true" focusable="false"><use href="#i-truck"/></svg>Livrare gratuită peste 250 lei</li>
+          <li><svg aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>Retur în 30 de zile</li>
+          <li><svg aria-hidden="true" focusable="false"><use href="#i-leaf"/></svg>100% natural</li>
+        </ul>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <svg class="art art--hero" viewBox="0 0 120 120" style="--h:158"><use href="#art-diffuser"/></svg>
+        <span class="floaty floaty--a"><svg aria-hidden="true" focusable="false"><use href="#i-star"/></svg>4,8 · peste 1.200 de recenzii</span>
+        <span class="floaty floaty--b"><svg aria-hidden="true" focusable="false"><use href="#i-truck"/></svg>Livrare în 24–48h</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SHOP ═════════════════════════════════════════════════════════ -->
+  <section class="shop" id="produse" aria-labelledby="shopH">
+    <h2 class="sr-only" id="shopH">Produse</h2>
+
+    <div class="toolbar" id="toolbar">
+      <div class="wrap toolbar__in">
+        <div class="chips" id="chips" role="tablist" aria-label="Categorii"></div>
+        <div class="toolbar__end">
+          <label class="sort">
+            <span class="sr-only">Sortează</span>
+            <select id="sort">
+              <option value="pop">Recomandate</option>
+              <option value="new">Noutăți</option>
+              <option value="asc">Preț crescător</option>
+              <option value="desc">Preț descrescător</option>
+            </select>
+            <svg aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <p class="count" id="count" role="status" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>
+        <svg aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+        <p><strong>Niciun produs găsit.</strong><br>Încearcă alt cuvânt sau vezi toate categoriile.</p>
+        <button class="btn btn--ghost" type="button" id="resetBtn">Șterge filtrele</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CUM ALEGI ════════════════════════════════════════════════════ -->
+  <section class="how" aria-labelledby="howH">
+    <div class="wrap">
+      <h2 class="h2" id="howH">Trei pași și miroase a casă</h2>
+      <ol class="how__list" role="list">
+        <li>
+          <span class="how__n">01</span>
+          <h3>Alege aroma</h3>
+          <p>Lavandă pentru somn, eucalipt pentru respirație, vanilie pentru seri lungi. Fiecare produs îți spune ce notă are.</p>
+        </li>
+        <li>
+          <span class="how__n">02</span>
+          <h3>Alege difuzia</h3>
+          <p>Difuzor electric pentru cameră mare, bețișoare pentru baie, lumânare pentru atmosferă. Sau un set, dacă le vrei pe toate.</p>
+        </li>
+        <li>
+          <span class="how__n">03</span>
+          <h3>Comandă în 30 de secunde</h3>
+          <p>Fără cont, fără pași inutili. Nume, telefon, adresă — atât. Plătești cu cardul sau la livrare.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══ DESPRE ═══════════════════════════════════════════════════════ -->
+  <section class="about" aria-labelledby="aboutH">
+    <div class="wrap about__grid">
+      <div>
+        <p class="eyebrow">Cine suntem</p>
+        <h2 class="h2" id="aboutH">Douăzeci și opt de ani de arome, făcute la Craiova.</h2>
+        <p class="about__p">Aroma Land este marca <strong>Electric Masters S.R.L.</strong>, o fabrică pornită în 1997. Turnăm lumânările, amestecăm uleiurile și umplem săculeții aici, în țară — și îi trimitem mai departe în magazine din toată România.</p>
+        <ul class="partners" role="list">
+          <li>Dedeman</li><li>Auchan</li><li>Meli Melo</li>
+        </ul>
+      </div>
+      <dl class="stats">
+        <div><dt>Din</dt><dd>1997</dd></div>
+        <div><dt>Produse</dt><dd>500+</dd></div>
+        <div><dt>Retur</dt><dd>30 zile</dd></div>
+        <div><dt>Livrare</dt><dd>24–48h</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<!-- ══ FOOTER ═════════════════════════════════════════════════════════ -->
+<footer class="ftr">
+  <div class="wrap ftr__grid">
+    <div class="ftr__brand">
+      <a class="logo" href="#" aria-label="Aroma Land">
+        <svg class="logo__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <path d="M32 12c8 8 13 15 13 22a13 13 0 0 1-26 0c0-7 5-14 13-22Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M32 28v16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+        </svg>
+        <span class="logo__txt">Aroma<span>Land</span></span>
+      </a>
+      <p>Aromaterapie, parfumare de cameră și decorațiuni. Electric Masters S.R.L., Craiova.</p>
+    </div>
+
+    <nav class="ftr__col" aria-labelledby="fc1">
+      <h2 id="fc1">Magazin</h2>
+      <ul role="list" id="ftrCats"></ul>
+    </nav>
+
+    <nav class="ftr__col" aria-labelledby="fc2">
+      <h2 id="fc2">Informații</h2>
+      <ul role="list">
+        <li><a href="/info/cum-cumpar">Cum cumpăr</a></li>
+        <li><a href="/info/metode-plata">Metode de plată</a></li>
+        <li><a href="/info/livrare">Livrare și retur</a></li>
+        <li><a href="/info/faq">Întrebări frecvente</a></li>
+        <li><a href="/info/despre-noi">Despre noi</a></li>
+      </ul>
+    </nav>
+
+    <div class="ftr__col">
+      <h2>Contact</h2>
+      <ul role="list">
+        <li><a href="tel:+40251000000">0251 000 000</a></li>
+        <li><a href="mailto:contact@aromaland-shop.ro">contact@aromaland-shop.ro</a></li>
+        <li>Luni–Vineri, 9:00–17:00</li>
+      </ul>
+      <p class="pay"><span>Card</span><span>Ramburs</span><span>EuPlătesc</span></p>
+    </div>
+  </div>
+
+  <div class="wrap ftr__legal">
+    <p>© <span id="year">2026</span> Aroma Land · Electric Masters S.R.L.</p>
+    <p>
+      <a href="https://anpc.ro/ce-este-sal/" rel="nofollow noopener" target="_blank">ANPC · SAL</a>
+      <a href="https://ec.europa.eu/consumers/odr" rel="nofollow noopener" target="_blank">SOL</a>
+      <a href="/info/termeni">Termeni</a>
+      <a href="/info/confidentialitate">Confidențialitate</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ══ MOBILE BUY BAR ═════════════════════════════════════════════════ -->
+<div class="mbar" id="mbar" hidden>
+  <button class="btn btn--primary btn--block" type="button" id="mbarBtn">
+    <span>Vezi coșul</span>
+    <span class="mbar__meta"><span id="mbarN">0</span> · <span id="mbarSum">0 lei</span></span>
+  </button>
+</div>
+
+<!-- ══ CART / CHECKOUT SHEET ══════════════════════════════════════════ -->
+<dialog class="sheet" id="cart" aria-labelledby="sheetTitle">
+  <div class="sheet__in">
+    <header class="sheet__head">
+      <button class="iconbtn" type="button" id="sheetBack" hidden aria-label="Înapoi la coș">
+        <svg aria-hidden="true" focusable="false"><use href="#i-back"/></svg>
+      </button>
+      <h2 id="sheetTitle">Coșul tău</h2>
+      <button class="iconbtn" type="button" id="sheetClose" aria-label="Închide">
+        <svg aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+      </button>
+    </header>
+
+    <div class="sheet__body">
+      <!-- View: cart -->
+      <section data-view="cart">
+        <div class="meter" id="meter"></div>
+        <ul class="lines" id="lines" role="list"></ul>
+        <div class="cart-empty" id="cartEmpty" hidden>
+          <svg aria-hidden="true" focusable="false"><use href="#i-cart"/></svg>
+          <p><strong>Coșul e gol.</strong><br>Alege o aromă și revino aici.</p>
+          <button class="btn btn--ghost" type="button" data-close-sheet>Vezi produsele</button>
+        </div>
+      </section>
+
+      <!-- View: checkout -->
+      <section data-view="checkout" hidden>
+        <form class="form" id="checkout" novalidate>
+          <fieldset class="fs">
+            <legend>Cum te găsim</legend>
+            <div class="field">
+              <label for="f-name">Nume și prenume</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Ioana Popescu">
+              <p class="err" data-err="name"></p>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="f-phone">Telefon</label>
+                <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="07xx xxx xxx">
+                <p class="err" data-err="phone"></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="ioana@exemplu.ro">
+                <p class="err" data-err="email"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="fs" id="fsAddress">
+            <legend>Unde livrăm</legend>
+            <div class="row">
+              <div class="field">
+                <label for="f-county">Județ</label>
+                <div class="selectwrap">
+                  <select id="f-county" name="county" autocomplete="address-level1" required></select>
+                  <svg aria-hidden="true" focusable="false"><use href="#i-chevron"/></svg>
+                </div>
+                <p class="err" data-err="county"></p>
+              </div>
+              <div class="field">
+                <label for="f-city">Localitate</label>
+                <input id="f-city" name="city" type="text" autocomplete="address-level2" required placeholder="Craiova">
+                <p class="err" data-err="city"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-street">Adresă</label>
+              <input id="f-street" name="street" type="text" autocomplete="street-address" required placeholder="Str. Unirii 12, bl. A2, ap. 5">
+              <p class="err" data-err="street"></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="fs">
+            <legend>Livrare</legend>
+            <div class="opts">
+              <label class="opt">
+                <input type="radio" name="ship" value="courier" checked>
+                <span class="opt__b">
+                  <span class="opt__t">Curier</span>
+                  <span class="opt__d">24–48h, oriunde în țară</span>
+                </span>
+                <span class="opt__p" id="shipPriceCourier">15 lei</span>
+              </label>
+              <label class="opt">
+                <input type="radio" name="ship" value="pickup">
+                <span class="opt__b">
+                  <span class="opt__t">Ridicare din magazin</span>
+                  <span class="opt__d">Craiova, azi dacă e în stoc</span>
+                </span>
+                <span class="opt__p">Gratuit</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="fs">
+            <legend>Plată</legend>
+            <div class="opts">
+              <label class="opt">
+                <input type="radio" name="pay" value="card" checked>
+                <span class="opt__b">
+                  <span class="opt__t">Card online</span>
+                  <span class="opt__d">Securizat prin EuPlătesc, fără comision</span>
+                </span>
+                <svg class="opt__i" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>
+              </label>
+              <label class="opt">
+                <input type="radio" name="pay" value="cod">
+                <span class="opt__b">
+                  <span class="opt__t">Ramburs</span>
+                  <span class="opt__d">Plătești curierului la primire</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <details class="note">
+            <summary>Adaugă o observație</summary>
+            <div class="field">
+              <label class="sr-only" for="f-note">Observații pentru comandă</label>
+              <textarea id="f-note" name="note" rows="3" placeholder="Ex: sunați înainte de livrare."></textarea>
+            </div>
+          </details>
+
+          <div class="field field--check">
+            <label class="check">
+              <input type="checkbox" id="f-terms" name="terms" required>
+              <span>Am citit și accept <a href="/info/termeni" target="_blank" rel="noopener">termenii și condițiile</a>.</span>
+            </label>
+            <p class="err" data-err="terms"></p>
+          </div>
+        </form>
+      </section>
+
+      <!-- View: done -->
+      <section data-view="done" hidden>
+        <div class="done">
+          <div class="done__mark"><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg></div>
+          <h3>Comandă trimisă</h3>
+          <p>Mulțumim! Ai primit un email de confirmare. Te sunăm dacă e ceva de lămurit.</p>
+          <p class="done__id">Comanda <strong id="orderId">#0000</strong></p>
+          <button class="btn btn--ghost btn--block" type="button" data-close-sheet>Înapoi la magazin</button>
+        </div>
+      </section>
+    </div>
+
+    <footer class="sheet__foot" id="sheetFoot">
+      <dl class="totals" id="totals"></dl>
+      <button class="btn btn--primary btn--block btn--lg" type="button" id="sheetCta">Finalizează comanda</button>
+      <p class="reassure"><svg aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>Retur gratuit în 30 de zile · Plata la livrare disponibilă</p>
+    </footer>
+  </div>
+</dialog>
+
+<!-- ══ QUICK VIEW ═════════════════════════════════════════════════════ -->
+<dialog class="qv" id="qv" aria-labelledby="qvTitle">
+  <div class="qv__in" id="qvIn"></div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<noscript>
+  <p style="padding:2rem;text-align:center">Magazinul are nevoie de JavaScript pentru coș și comandă. Poți comanda telefonic la <a href="tel:+40251000000">0251 000 000</a>.</p>
+</noscript>
+
+<!-- ══ SPRITE ═════════════════════════════════════════════════════════ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- ── interface icons (24×24, stroked) ── -->
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M6 8h12l-1 11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 6v12M6 12h12"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 13 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l.8 12a2 2 0 0 0 2 1.9h4.4a2 2 0 0 0 2-1.9L17 7"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M14 6l-6 6 6 6"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 7h11v9H2zM13 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-2.9 8.3-7 10-4.1-1.7-7-5.6-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4c0 9-5 14-11 14a5 5 0 0 1-5-5C4 8 10 4 20 4Z"/><path d="M4 20c4-6 8-9 12-10"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6 7 7m10 10 1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6 .8-4.4 4.3 1.1 6.1L12 17l-5.3 2.8 1.1-6.1L3.4 9.4l6-.8L12 3Z" fill="currentColor" stroke="none"/></symbol>
+
+    <!-- ── product art (120×120) ──────────────────────────────────────
+         Painted with var(--a-fill) / var(--a-line), set on .art in CSS and
+         tinted per product by --h. Presentation attributes, not classes:
+         document rules cannot style inside a <use> shadow tree, but custom
+         properties inherit into it. -->
+    <symbol id="art-oil" viewBox="0 0 120 120">
+      <path fill="var(--a-fill)" d="M54 62a17 17 0 0 0-6 12v20a7 7 0 0 0 7 7h10a7 7 0 0 0 7-7V74a17 17 0 0 0-6-12Z"/>
+      <g fill="none" stroke="var(--a-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M52 18h16a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H52a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3Z"/>
+        <path d="M55 30v9c0 3-1 4-3 6a20 20 0 0 0-7 15v27a8 8 0 0 0 8 8h14a8 8 0 0 0 8-8V60a20 20 0 0 0-7-15c-2-2-3-3-3-6v-9"/>
+        <path d="M48 68h24M48 84h24" opacity=".55"/>
+      </g>
+    </symbol>
+
+    <symbol id="art-diffuser" viewBox="0 0 120 120">
+      <path fill="var(--a-fill)" d="M42 76c0-12 8-21 18-21s18 9 18 21v6a8 8 0 0 1-8 8H50a8 8 0 0 1-8-8Z"/>
+      <g fill="none" stroke="var(--a-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M38 78c0-14 10-25 22-25s22 11 22 25v4a10 10 0 0 1-10 10H48a10 10 0 0 1-10-10Z"/>
+        <path d="M50 92v6h20v-6"/>
+        <circle cx="60" cy="80" r="4.5"/>
+        <path d="M46 42c-5-6 3-9-1-16M60 36c-5-6 3-10-1-17M74 42c-5-6 3-9-1-16" opacity=".6"/>
+      </g>
+    </symbol>
+
+    <symbol id="art-candle" viewBox="0 0 120 120">
+      <path fill="var(--a-fill)" d="M40 64h40v28a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8Z"/>
+      <path fill="var(--a-fill)" d="M60 24c6 6 9 10 9 14a9 9 0 0 1-18 0c0-4 3-8 9-14Z"/>
+      <g fill="none" stroke="var(--a-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M38 56h44v36a8 8 0 0 1-8 8H46a8 8 0 0 1-8-8Z"/>
+        <path d="M38 64h44" opacity=".55"/>
+        <path d="M60 46v10"/>
+        <path d="M60 24c6 6 9 10 9 14a9 9 0 0 1-18 0c0-4 3-8 9-14Z"/>
+      </g>
+    </symbol>
+
+    <symbol id="art-reed" viewBox="0 0 120 120">
+      <path fill="var(--a-fill)" d="M46 66h28v24a8 8 0 0 1-8 8H54a8 8 0 0 1-8-8Z"/>
+      <g fill="none" stroke="var(--a-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M44 68c0-9 4-13 4-19v-5h24v5c0 6 4 10 4 19v22a8 8 0 0 1-8 8H52a8 8 0 0 1-8-8Z"/>
+        <path d="M52 44v-8h16v8"/>
+        <path d="M56 36 46 14M60 36V12M64 36l10-22M51 36 38 20M69 36l13-16" opacity=".7"/>
+      </g>
+    </symbol>
+
+    <symbol id="art-sticks" viewBox="0 0 120 120">
+      <path fill="var(--a-fill)" d="M38 88h44a6 6 0 0 1 0 12H38a6 6 0 0 1 0-12Z"/>
+      <g fill="none" stroke="var(--a-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M36 88h48a6 6 0 0 1 0 12H36a6 6 0 0 1 0-12Z"/>
+        <path d="M50 88 44 32M60 88V28M70 88l6-56"/>
+        <path d="M44 24c-4-5 3-7 0-11M60 20c-4-5 3-7 0-11M76 24c-4-5 3-7 0-11" opacity=".55"/>
+      </g>
+    </symbol>
+
+    <symbol id="art-sachet" viewBox="0 0 120 120">
+      <path fill="var(--a-fill)" d="M42 50h36v40a8 8 0 0 1-8 8H50a8 8 0 0 1-8-8Z"/>
+      <g fill="none" stroke="var(--a-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40 46h40v46a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8Z"/>
+        <path d="M40 58h40" opacity=".55"/>
+        <path d="M52 46V32a8 8 0 0 1 16 0v14"/>
+        <path d="M60 70v18M60 78c-4-1-6-4-7-8 3 .4 6 2 7 5Zm0 8c4-1 6-4 7-8-3 .4-6 2-7 5Z"/>
+      </g>
+    </symbol>
+
+    <symbol id="art-set" viewBox="0 0 120 120">
+      <path fill="var(--a-fill)" d="M34 64h52v28a6 6 0 0 1-6 6H40a6 6 0 0 1-6-6Z"/>
+      <g fill="none" stroke="var(--a-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M30 52h60v12H30zM34 64h52v28a6 6 0 0 1-6 6H40a6 6 0 0 1-6-6Z"/>
+        <path d="M60 52v46"/>
+        <path d="M60 52c-8 0-14-2-14-7s6-5 9-2 5 9 5 9Zm0 0c8 0 14-2 14-7s-6-5-9-2-5 9-5 9Z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+</body>
+</html>
