@@ -96,19 +96,16 @@ manifest entry at its file. See `assets/instagram/README.md`.
 
 ## The two storefront photos
 
-The location cards expect two files, and **they are the one thing still
-missing** — the photos were shared in chat, which I could not write to disk from
-the build environment. Drop them in and nothing else needs changing:
+The location cards load two files. To change a photo, replace the file at the
+same path and nothing else needs changing:
 
 | file | which shop |
 |---|---|
-| `assets/locations/mihai-viteazul.jpg` | Apple Jacks daily — the street front with the crate wall and the chalkboard |
-| `assets/locations/traian-lalescu.jpg` | Apple Jacks Coffeeholic — the house with the green awning and the terrace |
+| `assets/locations/mihai-viteazul.jpg` | Apple Jacks daily — the entrance with the crate wall and the chalkboard |
+| `assets/locations/traian-lalescu.jpg` | Apple Jacks Coffeeholic — the street view of the pink building with seating outside |
 
-Until a file is there, the card shows a generated two-ink plate instead of a
-broken image. Once present, the photo is desaturated, washed in red ink and
-grained so it sits inside the risograph look, and returns to full colour on
-hover.
+If a file is missing, the card shows a generated two-ink plate instead of a
+broken image. Photos are shown as they are, with no colour filter.
 
 ## Content still to confirm
 

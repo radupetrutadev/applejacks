@@ -813,22 +813,11 @@ body[data-locked="true"] { overflow: hidden; }
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  filter: grayscale(1) contrast(1.18) brightness(1.02);
   transform: scale(1.02);
-  transition: filter .6s var(--ease), transform .8s var(--ease);
-}
-/* red-ink duotone wash, lifted on hover */
-.frame::after {
-  content: ""; position: absolute; inset: 0; z-index: 2;
-  background: var(--red);
-  mix-blend-mode: var(--blend);
-  opacity: .82;
-  transition: opacity .5s var(--ease);
-  pointer-events: none;
+  transition: transform .8s var(--ease);
 }
 .frame:hover .frame__media,
-.frame:focus-visible .frame__media { filter: none; transform: scale(1.06); }
-.frame:hover::after, .frame:focus-visible::after { opacity: 0; }
+.frame:focus-visible .frame__media { transform: scale(1.06); }
 
 .frame__idx {
   position: absolute; top: .45rem; left: .5rem; z-index: 4;
@@ -849,8 +838,6 @@ body[data-locked="true"] { overflow: hidden; }
 .frame:hover .frame__cap, .frame:focus-visible .frame__cap { opacity: 1; transform: none; }
 
 /* deterministic two-ink plates, used until real photos are dropped in */
-.frame--art .frame__media { filter: none; }
-.frame--art::after { opacity: 0; }
 .frame--art:hover { outline: 2px solid var(--red); outline-offset: -2px; }
 
 
@@ -954,9 +941,7 @@ body[data-locked="true"] { overflow: hidden; }
   align-content: start;
 }
 
-/* Photographs are pulled into the two-ink world: desaturated, then washed in
-   red ink and pressed with the same grain as the paper. Hover lifts the ink
-   and gives the picture back. */
+/* Photographs are shown as shot; hover just leans in a little. */
 .place__shot {
   position: relative;
   display: block;
@@ -973,28 +958,23 @@ body[data-locked="true"] { overflow: hidden; }
   object-fit: cover;
 }
 .place__shot img {
-  filter: grayscale(1) contrast(1.16) brightness(1.04);
   transform: scale(1.03);
-  transition: filter .7s var(--ease), transform .9s var(--ease), opacity .5s var(--ease);
+  transition: transform .9s var(--ease), opacity .5s var(--ease);
   z-index: 1;
 }
-.place__shot::after {
-  content: ""; position: absolute; inset: 0; z-index: 2;
-  background: var(--red);
-  mix-blend-mode: var(--blend);
-  opacity: .74;
-  transition: opacity .55s var(--ease);
-  pointer-events: none;
-}
 .place:hover .place__shot img,
-.place__shot:focus-visible img { filter: none; transform: scale(1.06); }
-.place:hover .place__shot::after,
-.place__shot:focus-visible::after { opacity: 0; }
+.place__shot:focus-visible img { transform: scale(1.06); }
 
 /* shown only when the photo file is not there yet */
 .place__plate { position: absolute; inset: 0; z-index: 0; }
 .place__shot[data-missing="true"] img { opacity: 0; }
-.place__shot[data-missing="true"]::after { opacity: .34; }
+.place__shot[data-missing="true"]::after {
+  content: ""; position: absolute; inset: 0; z-index: 2;
+  background: var(--red);
+  mix-blend-mode: var(--blend);
+  opacity: .34;
+  pointer-events: none;
+}
 
 .place__nr {
   position: absolute; top: .5rem; left: .6rem; z-index: 3;
