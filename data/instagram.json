@@ -6,30 +6,30 @@
   "items": [
     {
       "id": "aj-01",
-      "image": null,
-      "alt": { "ro": "Ceașcă de espresso pe tejghea", "en": "Espresso cup on the counter" },
-      "caption": { "ro": "Prima de dimineață.", "en": "The first one of the morning." },
+      "image": "assets/instagram/applejacksdaily-01.webp",
+      "alt": { "ro": "Doi prieteni în tricouri cu mărul Apple Jacks ciocnesc paharele de cafea în fața cafenelei", "en": "Two friends in Apple Jacks apple tees toasting their coffees outside the shop" },
+      "caption": { "ro": "Fă lucruri mici cu dragoste mare.", "en": "Do small things with great love." },
       "permalink": "https://www.instagram.com/applejacksdaily/"
     },
     {
       "id": "aj-02",
-      "image": null,
-      "alt": { "ro": "Latte art într-o cană albă", "en": "Latte art in a white mug" },
-      "caption": { "ro": "Lapte turnat cu răbdare.", "en": "Milk, poured with patience." },
+      "image": "assets/instagram/applejacksdaily-02.webp",
+      "alt": { "ro": "Căni de lut lucrate manual, unele cu mărul Apple Jacks imprimat", "en": "Handmade clay cups, some stamped with the Apple Jacks apple" },
+      "caption": { "ro": "Căni făcute de mână, cu mărul nostru.", "en": "Handmade cups, stamped with our apple." },
       "permalink": "https://www.instagram.com/applejacksdaily/"
     },
     {
       "id": "aj-03",
-      "image": null,
-      "alt": { "ro": "Vitrina cu prăjituri", "en": "The pastry case" },
-      "caption": { "ro": "Se termină până la prânz.", "en": "Gone by noon." },
+      "image": "assets/instagram/applejacksdaily-03.webp",
+      "alt": { "ro": "Ceașcă de ceramică cu mărul Apple Jacks, sprijinită într-un inel de fier ruginit cu lacăte", "en": "A ceramic cup stamped with the Apple Jacks apple, resting in a rusted iron ring hung with padlocks" },
+      "caption": { "ro": "Ceașca noastră, plecată în lume.", "en": "Our cup, out in the world." },
       "permalink": "https://www.instagram.com/applejacksdaily/"
     },
     {
       "id": "aj-04",
-      "image": null,
-      "alt": { "ro": "Lumină de dimineață pe geam", "en": "Morning light on the window" },
-      "caption": { "ro": "Locurile bune, la geam.", "en": "The good seats are by the window." },
+      "image": "assets/instagram/applejacksdaily-04.webp",
+      "alt": { "ro": "Tavanul cafenelei acoperit cu sute de pahare de cafea desenate", "en": "The shop ceiling, covered in hundreds of doodled paper coffee cups" },
+      "caption": { "ro": "Fiecare pahar de sus are o poveste.", "en": "Every cup up there has a story." },
       "permalink": "https://www.instagram.com/applejacksdaily/"
     },
     {
